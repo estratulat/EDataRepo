@@ -1,0 +1,11 @@
+C:\Users\estratulat\source\repos\EData\EData\bin\Debug\netcoreapp2.1\EData.deps.json
+C:\Users\estratulat\source\repos\EData\EData\bin\Debug\netcoreapp2.1\EData.runtimeconfig.json
+C:\Users\estratulat\source\repos\EData\EData\bin\Debug\netcoreapp2.1\EData.runtimeconfig.dev.json
+C:\Users\estratulat\source\repos\EData\EData\bin\Debug\netcoreapp2.1\EData.dll
+C:\Users\estratulat\source\repos\EData\EData\bin\Debug\netcoreapp2.1\EData.pdb
+C:\Users\estratulat\source\repos\EData\EData\obj\Debug\netcoreapp2.1\EData.csprojAssemblyReference.cache
+C:\Users\estratulat\source\repos\EData\EData\obj\Debug\netcoreapp2.1\EData.csproj.CoreCompileInputs.cache
+C:\Users\estratulat\source\repos\EData\EData\obj\Debug\netcoreapp2.1\EData.AssemblyInfoInputs.cache
+C:\Users\estratulat\source\repos\EData\EData\obj\Debug\netcoreapp2.1\EData.AssemblyInfo.cs
+C:\Users\estratulat\source\repos\EData\EData\obj\Debug\netcoreapp2.1\EData.dll
+C:\Users\estratulat\source\repos\EData\EData\obj\Debug\netcoreapp2.1\EData.pdb
