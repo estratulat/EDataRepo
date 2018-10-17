@@ -90,43 +90,27 @@ namespace EData
                 Console.WriteLine("No Input");
                 return;
             }
-            
-
             string[] stringEmployee = inputString.Split(";", StringSplitOptions.RemoveEmptyEntries);
-            var r = new Regex(@"\A\s*(\d+) (\w+) (\w+) (\d+) (\d{2}\/\d{2}\/\d{4})\s*\Z", RegexOptions.IgnoreCase); //10 John Doe 4000 15/12/2018;11 Ion Don 4000 11/10/2013;13 Jid Kot 5500 05/05/2018
-
 
             foreach (var sE in stringEmployee)
             {
-
-                var match = r.Match(sE);
-                if (match.Success)
+                try
                 {
-                    try
+                    var Employee = new Employee();
+                    Employee.ParseFromString(sE);
+
+                    if (!Employees.ContainsKey(Employee.ID))
                     {
-                        var Employee = new Employee();
-
-                        Employee.ID = int.Parse(match.Groups[1].Value);
-                        Employee.FirstName = match.Groups[2].Value;
-                        Employee.LastName = match.Groups[3].Value;
-                        Employee.Salary = int.Parse(match.Groups[4].Value);
-                        Employee.Date = DateTime.ParseExact(match.Groups[5].Value, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
-                        if (!Employees.ContainsKey(Employee.ID))
-                        {
+                        if (Employee != null)
                             Employees.Add(Employee.ID, Employee);
-                        }
-                        else
-                            Console.WriteLine("Employee ID duplicate");
                     }
-                    catch(Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                    }
+                    else
+                        Console.WriteLine("Employee ID duplicate");
                 }
-                else
-                    Console.WriteLine("Invalid input: " + sE);
-
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
         }
 
